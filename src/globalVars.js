@@ -1,3 +1,140 @@
+var astros = [
+  {
+    "Name": "Arid",
+    "Metal": "2",
+    "Gas": "2",
+    "Crystals": "0",
+    "Fertility": "5",
+    "Area Planet": "95",
+    "Area Moon": "83"
+  },
+  {
+    "Name": "Asteroid",
+    "Metal": "3",
+    "Gas": "1",
+    "Crystals": "2",
+    "Fertility": "4",
+    "Area Planet": "-",
+    "Area Moon": "(65)"
+  },
+  {
+    "Name": "Craters",
+    "Metal": "3",
+    "Gas": "1",
+    "Crystals": "1",
+    "Fertility": "4",
+    "Area Planet": "85",
+    "Area Moon": "75"
+  },
+  {
+    "Name": "Crystalline",
+    "Metal": "2",
+    "Gas": "1",
+    "Crystals": "3",
+    "Fertility": "4",
+    "Area Planet": "80",
+    "Area Moon": "71"
+  },
+  {
+    "Name": "Earthly",
+    "Metal": "2",
+    "Gas": "2",
+    "Crystals": "0",
+    "Fertility": "6",
+    "Area Planet": "85",
+    "Area Moon": "75"
+  },
+  {
+    "Name": "Gaia",
+    "Metal": "2",
+    "Gas": "2",
+    "Crystals": "0",
+    "Fertility": "6",
+    "Area Planet": "90",
+    "Area Moon": "79"
+  },
+  {
+    "Name": "Glacial",
+    "Metal": "1",
+    "Gas": "2",
+    "Crystals": "0",
+    "Fertility": "5",
+    "Area Planet": "95",
+    "Area Moon": "83"
+  },
+  {
+    "Name": "Magma",
+    "Metal": "2",
+    "Gas": "4",
+    "Crystals": "0",
+    "Fertility": "5",
+    "Area Planet": "80",
+    "Area Moon": "71"
+  },
+  {
+    "Name": "Metallic",
+    "Metal": "3",
+    "Gas": "2",
+    "Crystals": "1",
+    "Fertility": "4",
+    "Area Planet": "85",
+    "Area Moon": "75"
+  },
+  {
+    "Name": "Oceanic",
+    "Metal": "1",
+    "Gas": "2",
+    "Crystals": "0",
+    "Fertility": "6",
+    "Area Planet": "80",
+    "Area Moon": "71"
+  },
+  {
+    "Name": "Radioactive",
+    "Metal": "2",
+    "Gas": "3",
+    "Crystals": "0",
+    "Fertility": "4",
+    "Area Planet": "90",
+    "Area Moon": "79"
+  },
+  {
+    "Name": "Rocky",
+    "Metal": "3",
+    "Gas": "2",
+    "Crystals": "0",
+    "Fertility": "5",
+    "Area Planet": "85",
+    "Area Moon": "75"
+  },
+  {
+    "Name": "Toxic",
+    "Metal": "2",
+    "Gas": "4",
+    "Crystals": "0",
+    "Fertility": "4",
+    "Area Planet": "90",
+    "Area Moon": "79"
+  },
+  {
+    "Name": "Tundra",
+    "Metal": "2",
+    "Gas": "2",
+    "Crystals": "0",
+    "Fertility": "5",
+    "Area Planet": "95",
+    "Area Moon": "83"
+  },
+  {
+    "Name": "Volcanic",
+    "Metal": "2",
+    "Gas": "4",
+    "Crystals": "0",
+    "Fertility": "5",
+    "Area Planet": "80",
+    "Area Moon": "71"
+  }
+];
 
 var technology = [
     {
@@ -263,6 +400,53 @@ var technology = [
     },
   ];
   
-  var navigation = ["Bases", "Map", "Fleets", "Empire", "Commanders", "Guild", "Notes", "Bookmarks","Notifications"]
-  
-  export {technology, structures, navigation};
+  var navigation = ["Bases", "Map", "Fleets", "Empire", "Commanders", "Guild", "Notes", "Bookmarks","Notifications"];
+
+  var gameState = {
+    player: {
+      id: 0
+    },
+    astros: {
+      "U02:86:03:11": {
+        type:     0,
+        terrain:  0,
+        area:     0,
+        solar:    0,
+        fertility:0,
+        crystal:  0,
+        metal:    0,
+        gas:      0
+      }
+    },
+    bases: {
+      "U02:86:03:11": {
+        owner: 0,
+        name: "Linux",
+        occ: 0,
+        econ: {
+          econ: 0,
+          real: 0
+        },
+      }
+    },
+    players: {
+      0: {
+        id: 0,
+        name: "",
+        guild: "",
+        level: "",
+        avatar: "",
+        bases: ["U02:86:03:11"],
+        fleets: [],
+        tech: [],
+        commanders: [],
+        notes: [],
+        bookmarks: [],
+        notifications: [],
+        trades: [],
+        units: []
+      }
+    },
+  }
+
+  export {technology, structures, navigation, astros, gameState};

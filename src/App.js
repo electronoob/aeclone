@@ -4,7 +4,9 @@ import Header from './Header';
 import Technologies from './Technologies';
 import Structures from './Structures';
 import Navigation from './Navigation';
-import {technology, structures, navigation} from './globalVars.js';
+import MyBaseList from './MyBaseList';
+
+import {technology, structures, gameState} from './globalVars.js';
 
 class App extends React.Component {
   constructor(props) {
@@ -25,6 +27,7 @@ class App extends React.Component {
             structures:   <Structures structures={structures}/>
           }[this.state.section]
         }
+        <MyBaseList />
       </div>
     );
   }
