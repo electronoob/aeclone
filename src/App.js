@@ -5,7 +5,6 @@ import Technologies from './Technologies';
 import Structures from './Structures';
 import Navigation from './Navigation';
 import MyBaseList from './MyBaseList';
-
 import {technology, structures, gameState} from './globalVars.js';
 
 class App extends React.Component {

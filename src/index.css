@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #111;
+  background-image:  linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('./seamless-space-stars.by.n4.png');
   color: #ddd;
 }
 

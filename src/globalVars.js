@@ -422,7 +422,43 @@ var technology = [
       "U02:86:03:11": {
         owner: 0,
         name: "Linux",
+        occ: 1,
+        econ: {
+          econ: 99,
+          real:70
+        },
+      },
+      "U02:26:01:01": {
+        owner: 0,
+        name: "Testing out",
+        occ: 1,
+        econ: {
+          econ: 100,
+          real: 80
+        },
+      },
+      "U04:16:03:01": {
+        owner: 0,
+        name: "Making up names",
         occ: 0,
+        econ: {
+          econ: 123,
+          real: 99
+        },
+      },
+      "U02:86:13:11": {
+        owner: 0,
+        name: "cool base",
+        occ: -1,
+        econ: {
+          econ: 80,
+          real: 80
+        },
+      },
+      "U01:12:23:01": {
+        owner: 1,
+        name: "spanish base",
+        occ: -1,
         econ: {
           econ: 0,
           real: 0
@@ -432,11 +468,27 @@ var technology = [
     players: {
       0: {
         id: 0,
-        name: "",
+        name: "electronoob",
         guild: "",
         level: "",
         avatar: "",
-        bases: ["U02:86:03:11"],
+        bases: ["U02:86:03:11","U02:26:01:01","U04:16:03:01","U02:86:13:11"],
+        fleets: [],
+        tech: [],
+        commanders: [],
+        notes: [],
+        bookmarks: [],
+        notifications: [],
+        trades: [],
+        units: []
+      },
+      1: {
+        id: 1,
+        name: "letalcub",
+        guild: "",
+        level: "",
+        avatar: "",
+        bases: ["U01:12:23:01"],
         fleets: [],
         tech: [],
         commanders: [],

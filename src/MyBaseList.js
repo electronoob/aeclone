@@ -36,7 +36,7 @@ class MyBaseList extends React.Component {
                         <tr>
                             <td>{gameState.bases[item].name}</td>
                             <td>{item}</td>
-                            <td>{gameState.bases[item].occ}</td>
+                            <td>{gameState.bases[item].occ >= 0 && gameState.players[gameState.bases[item].occ].name}</td>
                             <td>{gameState.bases[item].econ.econ} / {gameState.bases[item].econ.real}</td>
                         </tr>
                     )
