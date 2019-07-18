@@ -14,6 +14,11 @@ class App extends React.Component {
       page: null,
       section: null
     };
+    document.addEventListener('navigation', (e)=> {
+      this.setState((state, props) => {
+        return {page: e.detail.message};
+      });
+    }, false);
   }
   render() {
     return  (
@@ -23,10 +28,10 @@ class App extends React.Component {
         {
           {
             technologies: <Technologies technologies={technology}/>,
-            structures:   <Structures structures={structures}/>
-          }[this.state.section]
+            structures:   <Structures structures={structures}/>,
+            Bases: <MyBaseList />
+          }[this.state.page]
         }
-        <MyBaseList />
       </div>
     );
   }

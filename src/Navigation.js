@@ -14,6 +14,17 @@ class Navigation extends React.Component {
     this.setState(state => ({
       active: index
     }));
+    var event = new CustomEvent(
+      "navigation", 
+      {
+        detail: {
+          message: navigation[index],
+        },
+        bubbles: true,
+        cancelable: true
+      }
+    );
+    document.dispatchEvent(event);
   }
   render() {
     return  (
