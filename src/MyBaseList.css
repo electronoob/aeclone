@@ -3,3 +3,6 @@
     table-layout: fixed;
     overflow-wrap: break-word;
 }
+.MyBaseList td,th {
+    text-align: center; 
+}
